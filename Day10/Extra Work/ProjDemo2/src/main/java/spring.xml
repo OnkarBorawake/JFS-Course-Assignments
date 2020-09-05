@@ -1,0 +1,31 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans-4.2.xsd">
+  
+  
+  	<bean id="welcome1" class="SampleMaven2.ProjDemo2.Welcome" init-method="initialize" destroy-method="destroy">
+		<property name="message" value="Welcome to Spring"/>
+		
+	</bean>
+  
+  
+ <!--   	<bean id="welcome1" class="SampleMaven2.ProjDemo2.Welcome">
+		<property name="message" value="Welcome to Spring"/>
+		
+	</bean>
+	
+	<bean id="welcome" class="SampleMaven2.ProjDemo2.Welcome">
+		<constructor-arg name="message" value="Welcome to Constructor"></constructor-arg>
+	</bean>
+	-->
+  </beans>
+  
+  
+	
+
+    
+           
+
+

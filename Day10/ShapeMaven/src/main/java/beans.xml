@@ -1,0 +1,53 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<beans xmlns="http://www.springframework.org/schema/beans"
+       xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+       xsi:schemaLocation="http://www.springframework.org/schema/beans
+           http://www.springframework.org/schema/beans/spring-beans-4.2.xsd">
+           
+       
+       <bean id="line1" class="ShapeApplication.ShapeMaven.Line">
+       		<property name="p1" ref="pl1"/>
+       		<property name="p2" ref="pl2"/>
+        </bean>
+        
+        <bean id="triangle1" class="ShapeApplication.ShapeMaven.Triangle">
+       		<property name="p1" ref="pt1"/>
+       		<property name="p2" ref="pt2"/>
+       		<property name="p3" ref="pt3"/>
+       		
+       		
+        </bean>
+        
+        <bean id="pl1" class="ShapeApplication.ShapeMaven.Point">
+       		<property name="x" value="10"/>
+       		<property name="y" value="20"/>
+       		
+        </bean>
+        
+        <bean id="pl2" class="ShapeApplication.ShapeMaven.Point">
+       		<property name="x" value="20"/>
+       		<property name="y" value="20"/>
+       		
+        </bean>
+        
+        <bean id="pt1" class="ShapeApplication.ShapeMaven.Point">
+       		<property name="x" value="30"/>
+       		<property name="y" value="40"/>
+       		
+        </bean>
+        <bean id="pt2" class="ShapeApplication.ShapeMaven.Point">
+       		<property name="x" value="70"/>
+       		<property name="y" value="70"/>
+       		
+        </bean>
+        <bean id="pt3" class="ShapeApplication.ShapeMaven.Point">
+       		<property name="x" value="100"/>
+       		<property name="y" value="150"/>
+       		
+        </bean>
+        
+           
+           
+           
+</beans>

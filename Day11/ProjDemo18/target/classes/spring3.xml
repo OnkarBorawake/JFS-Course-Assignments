@@ -1,0 +1,50 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+    xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+    xmlns:context="http://www.springframework.org/schema/context"
+    xmlns:aop="http://www.springframework.org/schema/aop"
+    xsi:schemaLocation="http://www.springframework.org/schema/beans
+    http://www.springframework.org/schema/beans/spring-beans-4.3.xsd
+    http://www.springframework.org/schema/context  
+    http://www.springframework.org/schema/context/spring-context-4.3.xsd
+    http://www.springframework.org/schema/aop 
+    http://www.springframework.org/schema/aop/spring-aop-4.3.xsd">
+    
+
+	<bean id="organization" class="SampleMaven4.ProjDemo4.Organization">
+		<property name="id" value="111"/>
+		<property name="name" value="Manipal"/>
+		<property name="employeeList">
+			<list>
+			<ref bean="employee1"/>
+			<ref bean="employee2"/>
+			<ref bean="employee3"/>
+			</list>
+		</property>
+	</bean>
+
+	
+	<bean id="employee1"
+		class="SampleMaven4.ProjDemo4.Employee">
+		<constructor-arg name="empId" value="10001" />
+		<constructor-arg name="empName" value="Ram" />
+		<constructor-arg name="salary" value="80000" />		
+	</bean>
+
+	<bean id="employee2"
+		class="SampleMaven4.ProjDemo4.Employee">
+		<constructor-arg name="empId" value="10002" />
+		<constructor-arg name="empName" value="Rama" />
+		<constructor-arg name="salary" value="66000" />		
+	</bean>
+	
+	<bean id="employee3"
+		class="SampleMaven4.ProjDemo4.Employee">
+		<constructor-arg name="empId" value="10003" />
+		<constructor-arg name="empName" value="Raman" />
+		<constructor-arg name="salary" value="99000" />		
+	</bean>
+	
+
+</beans>
+

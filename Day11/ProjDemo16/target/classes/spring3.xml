@@ -1,0 +1,48 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<beans xmlns="http://www.springframework.org/schema/beans"
+xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+xmlns:context="http://www.springframework.org/schema/context"
+xmlns:aop="http://www.springframework.org/schema/aop"
+xsi:schemaLocation="http://www.springframework.org/schema/beans
+http://www.springframework.org/schema/beans/spring-beans-4.3.xsd
+http://www.springframework.org/schema/context
+http://www.springframework.org/schema/context/spring-context-4.3.xsd
+http://www.springframework.org/schema/aop
+http://www.springframework.org/schema/aop/spring-aop-4.3.xsd">
+   
+   
+    <context:annotation-config/>
+	<bean id="employee" class="SampleMaven4.ProjDemo4.Employee"> <!-- byName -->
+		<constructor-arg name="empId" value="10001"/>
+		<constructor-arg name="empName" value="Ram"/>
+		<constructor-arg name="salary" value="89000"/>
+		<constructor-arg name="address" ref="address1"></constructor-arg>
+		<constructor-arg name="dept" ref="dept1"></constructor-arg>
+	</bean>
+	
+
+    
+
+	<bean id="address1" class="SampleMaven4.ProjDemo4.Address">  <!-- address -->
+		<property name="streetNo" value="123"/>
+		<property name="city" value="Bengaluru"/>
+		<property name="pin" value="560001"/>
+	</bean>
+	 	<bean id="address2" class="SampleMaven4.ProjDemo4.Address">  
+		<property name="streetNo" value="1235"/>
+		<property name="city" value="BengaluruA"/>
+		<property name="pin" value="5600011"/>
+	</bean>
+	 
+	<bean id="dept1" class="SampleMaven4.ProjDemo4.Department">  <!-- address -->
+		<property name="deptNo" value="100"/>
+		<property name="deptName" value="CS"/>
+	</bean>
+	
+	<bean id="dept2" class="SampleMaven4.ProjDemo4.Department">  <!-- address -->
+		<property name="deptNo" value="55"/>
+		<property name="deptName" value="IT"/>
+	</bean>
+    
+           
+</beans>
